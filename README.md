@@ -37,11 +37,12 @@ node -v
 
 ### 2. Installation
 
-Clone the repository and install the project dependencies:
+1. Clone the repository and install the project dependencies:
 
-Bash
-* Clone the repository
-git clone https://github.com/SenaEnana/test-app
+```Bash
+Clone the repository
+git clone https://github.com/SenaEnana/CRUD-app
+```
 
 * Navigate into the project directory
 cd test-app
