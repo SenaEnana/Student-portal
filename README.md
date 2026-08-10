@@ -52,8 +52,10 @@ Clone the repository
 git clone https://github.com/SenaEnana/CRUD-app
 ```
 
-* Navigate into the project directory
+2. Navigate into the project directory
+```Bash
 cd test-app
+```
 
 * Install dependencies
 npm install
