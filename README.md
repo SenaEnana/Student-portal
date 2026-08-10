@@ -65,8 +65,9 @@ npm install
 
 Start the local development server:
 
-Bash
+```Bash
 npm run dev
+```
 Open http://localhost:3000 with your browser to see the application in action!
 
 ## 📂 Project Structure
