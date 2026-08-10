@@ -29,10 +29,12 @@ Follow these simple steps to get a local copy of the project up and running.
 
 ### 1. Prerequisites
 
-Make sure you have Node.js installed on your machine:
+1. Make sure you have Node.js installed on your machine:
 
-Bash
+```Bash
 node -v
+```
+
 ### 2. Installation
 
 Clone the repository and install the project dependencies:
