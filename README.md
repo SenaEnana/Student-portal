@@ -37,6 +37,53 @@ Follow these simple steps to get a local copy of the project up and running.
 
 ### 1. Prerequisites
 
-Make sure you have Node.js installed on your machine:
-```bash
+1. Make sure you have Node.js installed on your machine:
+
+```Bash
 node -v
+```
+
+### 2. Installation
+
+1. Clone the repository and install the project dependencies:
+
+```Bash
+Clone the repository
+git clone https://github.com/SenaEnana/CRUD-app
+```
+
+* Navigate into the project directory
+cd test-app
+
+* Install dependencies
+npm install
+### 3. Running the Application
+
+Start the local development server:
+
+Bash
+npm run dev
+Open http://localhost:3000 with your browser to see the application in action!
+
+## 📂 Project Structure
+
+A quick overview of the key directories in this project:
+  
+* ├── api/              # Reusable API end-points
+* ├── pages/ or app/    # Next.js routing and page views
+* ├── public/           # Static assets like images and icons
+* ├── styles/           # Global styles and Tailwind configurations
+* └── README.md         # Project documentation
+
+## 💡 What I Learned
+
+-Building this application helped reinforce several key web development concepts:
+
+-Handling asynchronous API requests within Next.js components.
+
+-Managing component-level and global state during CRUD operations.
+
+-Structuring clean, modular, and reusable components.
+
+## 📝 License
+**This project is open-source and available under the MIT License.**
