@@ -97,5 +97,11 @@ A quick overview of the key directories in this project:
 
 ---
 
+## 👨‍💻 Author
+
+Sena Adane
+
+---
+
 ## 📝 License
 **This project is open-source and available under the MIT License.**
