@@ -57,8 +57,10 @@ git clone https://github.com/SenaEnana/CRUD-app
 cd test-app
 ```
 
-* Install dependencies
+3. Install dependencies
+```Bash
 npm install
+```
 ### 3. Running the Application
 
 Start the local development server:
