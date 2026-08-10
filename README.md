@@ -87,13 +87,15 @@ A quick overview of the key directories in this project:
 
 ## 💡 What I Learned
 
--Building this application helped reinforce several key web development concepts:
+* Building this application helped reinforce several key web development concepts:
 
--Handling asynchronous API requests within Next.js components.
+* Handling asynchronous API requests within Next.js components.
 
--Managing component-level and global state during CRUD operations.
+* Managing component-level and global state during CRUD operations.
 
--Structuring clean, modular, and reusable components.
+* Structuring clean, modular, and reusable components.
+
+---
 
 ## 📝 License
 **This project is open-source and available under the MIT License.**
