@@ -1,30 +1,38 @@
-# Next.js Simple CRUD Application
+# 🚀 Next.js Simple Student Information CRUD Application
 
-A lightweight, responsive CRUD (Create, Read, Update, Delete) web application built using Next.js and a fake/mock REST API. This project was developed as a hands-on practice application to master state management, API data fetching, routing, and UI design in the Next.js ecosystem.
+A lightweight, responsive CRUD (Create, Read, Update, Delete) web application built using Next.js. This project was developed as a hands-on practice application to master state management, API data fetching, multi-page routing, and UI design in the Next.js ecosystem.
+
+🔗 **[View Live Demo](https://crud-app-three-puce.vercel.app)**
+
+---
 
 ## 🚀 Features
 
--Read: Fetch and display a list of resources dynamically from a mock API.
+*   **Read:** Fetch and display a list of student records dynamically.
+*   **Create:** Add new items to the list via a dedicated form page.
+*   **Update:** Edit existing item details with pre-populated form data.
+*   **Delete:** Instantly remove items from the UI with immediate state updates.
+*   **Responsive Design:** Styled with Tailwind CSS, optimized for seamless viewing across mobile, tablet, and desktop screens.
 
--Create: Add new items to the list via a user-friendly modal or dedicated form page.
-
--Update: Edit existing item details with pre-populated form data.
-
--Delete: Instantly remove items from the UI with immediate state updates.
-
--Responsive Design: Optimized for seamless viewing across mobile, tablet, and desktop screens.
+---
 
 ## 🛠️ Tech Stack
 
--Framework: Next.js
+*   **Framework:** Next.js (App Router)
+*   **Styling:** Tailwind CSS
+*   **Data Fetching:** Fetch API / Axios
 
--Styling: Tailwind CSS (or standard CSS modules, depending on what you used!)
+---
 
--Data Fetching: Fetch API / Axios
+## 📸 Screenshots
 
--Mock Backend: JSONPlaceholder / ReqRes
+<img width="1144" height="731" alt="crud-app-three-puce vercel app_" src="https://github.com/user-attachments/assets/5d803966-671f-4ab4-8e90-e56db95232e4" />
+
+
+---
 
 ## 📦 Getting Started
+
 Follow these simple steps to get a local copy of the project up and running.
 
 ### 1. Prerequisites
