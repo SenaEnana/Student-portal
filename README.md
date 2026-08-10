@@ -52,18 +52,26 @@ Clone the repository
 git clone https://github.com/SenaEnana/CRUD-app
 ```
 
-* Navigate into the project directory
+2. Navigate into the project directory
+```Bash
 cd test-app
+```
 
-* Install dependencies
+3. Install dependencies
+```Bash
 npm install
+```
 ### 3. Running the Application
 
 Start the local development server:
 
-Bash
+```Bash
 npm run dev
+```
+
 Open http://localhost:3000 with your browser to see the application in action!
+
+---
 
 ## 📂 Project Structure
 
@@ -75,15 +83,25 @@ A quick overview of the key directories in this project:
 * ├── styles/           # Global styles and Tailwind configurations
 * └── README.md         # Project documentation
 
+---
+
 ## 💡 What I Learned
 
--Building this application helped reinforce several key web development concepts:
+* Building this application helped reinforce several key web development concepts:
 
--Handling asynchronous API requests within Next.js components.
+* Handling asynchronous API requests within Next.js components.
 
--Managing component-level and global state during CRUD operations.
+* Managing component-level and global state during CRUD operations.
 
--Structuring clean, modular, and reusable components.
+* Structuring clean, modular, and reusable components.
+
+---
+
+## 👨‍💻 Author
+
+Sena Adane
+
+---
 
 ## 📝 License
 **This project is open-source and available under the MIT License.**
