@@ -83,6 +83,8 @@ A quick overview of the key directories in this project:
 * ├── styles/           # Global styles and Tailwind configurations
 * └── README.md         # Project documentation
 
+---
+
 ## 💡 What I Learned
 
 -Building this application helped reinforce several key web development concepts:
