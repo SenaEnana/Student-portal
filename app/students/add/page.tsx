@@ -12,7 +12,7 @@ export default function AddStudentPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const trimmedName = name.trim();
     if (!trimmedName) {
       setError("Student name cannot be empty.");
@@ -47,14 +47,26 @@ export default function AddStudentPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
-      <div className="max-w-md w-full bg-white shadow-sm border border-gray-200 rounded-xl p-8">
-        <h1 className="text-2xl font-bold text-gray-800 mb-2">Add New Student</h1>
-        <p className="text-gray-500 text-sm mb-6">Enter the full name of the student.</p>
+    <div className="min-h-screen animated-bg flex items-center justify-center p-4 md:p-6 relative overflow-hidden text-white">
+      <div className="absolute top-1/3 left-1/3 w-80 h-80 bg-[var(--lime)]/10 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-[var(--violet)]/15 rounded-full blur-3xl pointer-events-none translate-x-1/2 translate-y-1/2" />
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="max-w-lg w-full font-sans shadow-2xl rounded-3xl p-6 md:p-10 bg-[var(--surface)]/80 backdrop-blur-xl border border-white/10 relative z-10 overflow-hidden">
+
+        <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-40 h-40 bg-gradient-to-b from-[var(--teal)]/25 to-transparent rounded-full blur-2xl pointer-events-none" />
+
+        <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-2">
+          <span className="bg-gradient-to-r from-[var(--lime)] via-[var(--teal)] to-[var(--violet)] bg-clip-text text-transparent">
+            Add New Student
+          </span>
+        </h1>
+        <p className="text-[var(--muted)] text-sm mb-8 leading-relaxed">
+          Enter the full name to register a new student profile in the database.
+        </p>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-xs font-bold uppercase tracking-wider text-[var(--teal)] mb-2">
               Full Name
             </label>
             <input
@@ -64,30 +76,37 @@ export default function AddStudentPage() {
                 setName(e.target.value);
                 if (error) setError("");
               }}
-              placeholder="e.g., John Doe"
-              className={`w-full border p-2.5 rounded-lg text-gray-900 focus:outline-none focus:ring-2 ${
-                error ? "border-red-500 focus:ring-red-200" : "border-gray-300 focus:ring-blue-200"
-              }`}
+              placeholder="e.g., Jane Doe"
+              className={`w-full bg-slate-900/60 border p-3.5 rounded-xl text-white placeholder:text-slate-500 text-sm transition-all focus:outline-none ${error
+                  ? "border-rose-500/80 focus:ring-2 focus:ring-rose-500/30"
+                  : "border-white/10 focus:border-[var(--teal)] focus:ring-2 focus:ring-[var(--teal)]/20"
+                }`}
             />
-            {error && <p className="text-red-500 text-xs mt-1.5">{error}</p>}
+            {error && (
+              <p className="text-rose-400 text-xs font-medium mt-2 flex items-center gap-1.5">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-rose-400" />
+                {error}
+              </p>
+            )}
           </div>
 
           <div className="flex gap-3 pt-2">
             <Link
               href="/students"
-              className="w-1/2 bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2.5 rounded-lg font-medium text-sm transition-colors"
+              className="w-1/2 text-center py-3.5 px-4 rounded-xl text-sm font-semibold text-slate-300 bg-white/5 hover:bg-white/10 border border-white/10 transition-colors"
             >
               Cancel
             </Link>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-1/2 bg-amber-500 hover:bg-amber-600 text-gray-900 font-medium py-2.5 rounded-lg text-sm shadow transition-colors disabled:opacity-50"
+              className="w-1/2 py-3.5 px-4 rounded-xl text-sm font-bold text-slate-950 bg-[var(--lime)] hover:bg-[var(--lime-hover)] transition-all shadow-lg shadow-[var(--lime)]/20 hover:shadow-xl hover:shadow-[var(--lime)]/30 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:pointer-events-none"
             >
               {isSubmitting ? "Saving..." : "Save Student"}
             </button>
           </div>
         </form>
+
       </div>
     </div>
   );
