@@ -13,8 +13,6 @@ function StudentsDashboardContent() {
   const [items, setItems] = useState<Item[]>([]);
   const [loading, setLoading] = useState(true);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-
-  // Delete Modal State
   const [studentToDelete, setStudentToDelete] = useState<Item | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -69,7 +67,7 @@ function StudentsDashboardContent() {
       console.error("ERROR DELETING:", error);
     } finally {
       setIsDeleting(false);
-      setStudentToDelete(null); // Close modal
+      setStudentToDelete(null);
     }
   };
 
@@ -77,7 +75,6 @@ function StudentsDashboardContent() {
     <div className="min-h-screen animated-bg p-6 md:p-10 relative text-white">
       <div className="max-w-5xl mx-auto">
 
-        {/* Toast Notification */}
         {toastMessage && (
           <div className="fixed top-5 right-5 z-50 bg-[var(--surface)]/90 backdrop-blur-md border border-[var(--lime)]/40 text-[var(--lime)] font-medium px-5 py-3 rounded-xl shadow-2xl flex items-center justify-between gap-4 transition-all animate-in fade-in slide-in-from-top-4 duration-300">
             <div className="flex items-center gap-2">
@@ -93,7 +90,6 @@ function StudentsDashboardContent() {
           </div>
         )}
 
-        {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
           <div>
             <h1 className="text-3xl font-extrabold tracking-tight">
@@ -119,8 +115,6 @@ function StudentsDashboardContent() {
             </Link>
           </div>
         </div>
-
-        {/* Table */}
         <div className="bg-[var(--surface)]/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
           <table className="w-full text-left border-collapse">
             <thead className="bg-white/5 border-b border-white/10 text-xs uppercase tracking-wider text-[var(--teal)] font-bold">
@@ -178,11 +172,9 @@ function StudentsDashboardContent() {
 
       </div>
 
-      {/* Confirmation Modal */}
       {studentToDelete && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md animate-in fade-in duration-200">
           <div className="max-w-sm w-full bg-[var(--surface)]/95 backdrop-blur-2xl border border-rose-500/30 rounded-2xl shadow-2xl p-6 relative overflow-hidden">
-            {/* Red Accent Blur Circle */}
             <div className="absolute -top-12 -right-12 w-28 h-28 bg-rose-500/20 rounded-full blur-2xl pointer-events-none" />
 
             <div className="flex items-center gap-3 mb-4">
