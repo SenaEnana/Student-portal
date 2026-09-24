@@ -8,19 +8,19 @@ A lightweight, responsive CRUD (Create, Read, Update, Delete) web application bu
 
 ## 🚀 Features
 
-    *   **Read:**               Fetch and display a list of student records dynamically.
-    *   **Create:**             Add new items to the list via a dedicated form page.
-    *   **Update:**             Edit existing item details with pre-populated form data.
-    *   **Delete:**             Instantly remove items from the UI with immediate state updates.
-    *   **Responsive Design:**  Styled with Tailwind CSS, optimized for seamless viewing across mobile, tablet, and desktop screens.
+        Read:               Fetch and display a list of student records dynamically.
+        Create:             Add new items to the list via a dedicated form page.
+        Update:             Edit existing item details with pre-populated form data.
+        Delete:             Instantly remove items from the UI with immediate state updates.
+        Responsive Design:  Styled with Tailwind CSS, optimized for seamless viewing across mobile, tablet, and desktop screens.
 
 ---
 
 ## 🛠️ Tech Stack
 
-    *   **Framework:**        Next.js (App Router)
-    *   **Styling:**          Tailwind CSS
-    *   **Data Fetching:**    Fetch API / Axios
+       Framework:        Next.js (App Router)
+       Styling:          Tailwind CSS
+       Data Fetching:    Fetch API / Axios
 
 ---
 
@@ -78,11 +78,11 @@ Open http://localhost:3000 with your browser to see the application in action!
 
 A quick overview of the key directories in this project:
   
-    * ├── api/              # Reusable API end-points
-    * ├── pages/ or app/    # Next.js routing and page views
-    * ├── public/           # Static assets like images and icons
-    * ├── styles/           # Global styles and Tailwind configurations
-    * └── README.md         # Project documentation
+     ├── api/               Reusable API end-points
+     ├── pages/ or app/     Next.js routing and page views
+     ├── public/            Static assets like images and icons
+     ├── styles/            Global styles and Tailwind configurations
+     └── README.md          Project documentation
 
 ---
 
