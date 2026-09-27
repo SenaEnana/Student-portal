@@ -18,11 +18,10 @@ function StudentsDashboardContent() {
   const searchParams = useSearchParams();
   const inlineMessage = searchParams.get("message");
 
-  // Read cross-page redirect messages
   useEffect(() => {
     if (inlineMessage) {
       setToastMessage(inlineMessage);
-      
+
       const timer = setTimeout(() => {
         setToastMessage(null);
         router.replace("/students");
@@ -57,7 +56,7 @@ function StudentsDashboardContent() {
       if (res.ok) {
         setToastMessage("Student record permanently deleted.");
         fetchItems();
-        
+
         setTimeout(() => setToastMessage(null), 4000);
       }
     } catch (error) {
@@ -68,16 +67,15 @@ function StudentsDashboardContent() {
   return (
     <div className="min-h-screen animated-bg p-6 md:p-10 relative text-white">
       <div className="max-w-5xl mx-auto">
-        
-        {/* Floating Success Alert */}
+
         {toastMessage && (
           <div className="fixed top-5 right-5 z-50 bg-[var(--surface)]/90 backdrop-blur-md border border-[var(--lime)]/40 text-[var(--lime)] font-medium px-5 py-3 rounded-xl shadow-2xl flex items-center justify-between gap-4 transition-all animate-in fade-in slide-in-from-top-4 duration-300">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[var(--lime)] animate-pulse" />
               <p className="text-sm text-slate-100">{toastMessage}</p>
             </div>
-            <button 
-              onClick={() => setToastMessage(null)} 
+            <button
+              onClick={() => setToastMessage(null)}
               className="text-slate-400 hover:text-white text-xs font-mono pl-2"
             >
               ✕
@@ -85,7 +83,6 @@ function StudentsDashboardContent() {
           </div>
         )}
 
-        {/* Top Header & Navigation */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
           <div>
             <h1 className="text-3xl font-extrabold tracking-tight">
@@ -95,7 +92,7 @@ function StudentsDashboardContent() {
             </h1>
             <p className="text-[var(--muted)] text-sm mt-1">Manage and update active student records</p>
           </div>
-          
+
           <div className="flex items-center gap-3 w-full sm:w-auto">
             <Link
               href="/"
@@ -112,7 +109,6 @@ function StudentsDashboardContent() {
           </div>
         </div>
 
-        {/* Main Data Table Container */}
         <div className="bg-[var(--surface)]/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
           <table className="w-full text-left border-collapse">
             <thead className="bg-white/5 border-b border-white/10 text-xs uppercase tracking-wider text-[var(--teal)] font-bold">
