@@ -12,7 +12,7 @@ export default function AddStudentPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const trimmedName = name.trim();
     if (!trimmedName) {
       setError("Student name cannot be empty.");
@@ -48,14 +48,11 @@ export default function AddStudentPage() {
 
   return (
     <div className="min-h-screen animated-bg flex items-center justify-center p-4 md:p-6 relative overflow-hidden text-white">
-      {/* Background Decorative Glow Orbs */}
       <div className="absolute top-1/3 left-1/3 w-80 h-80 bg-[var(--lime)]/10 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-[var(--violet)]/15 rounded-full blur-3xl pointer-events-none translate-x-1/2 translate-y-1/2" />
 
-      {/* Main Glass Card Form */}
       <div className="max-w-lg w-full font-sans shadow-2xl rounded-3xl p-6 md:p-10 bg-[var(--surface)]/80 backdrop-blur-xl border border-white/10 relative z-10 overflow-hidden">
-        
-        {/* Top Decorative Glow */}
+
         <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-40 h-40 bg-gradient-to-b from-[var(--teal)]/25 to-transparent rounded-full blur-2xl pointer-events-none" />
 
         <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-2">
@@ -80,11 +77,10 @@ export default function AddStudentPage() {
                 if (error) setError("");
               }}
               placeholder="e.g., Jane Doe"
-              className={`w-full bg-slate-900/60 border p-3.5 rounded-xl text-white placeholder:text-slate-500 text-sm transition-all focus:outline-none ${
-                error
+              className={`w-full bg-slate-900/60 border p-3.5 rounded-xl text-white placeholder:text-slate-500 text-sm transition-all focus:outline-none ${error
                   ? "border-rose-500/80 focus:ring-2 focus:ring-rose-500/30"
                   : "border-white/10 focus:border-[var(--teal)] focus:ring-2 focus:ring-[var(--teal)]/20"
-              }`}
+                }`}
             />
             {error && (
               <p className="text-rose-400 text-xs font-medium mt-2 flex items-center gap-1.5">
