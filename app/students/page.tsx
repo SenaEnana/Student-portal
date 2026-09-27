@@ -172,7 +172,6 @@ function StudentsDashboardContent() {
 
       </div>
 
-      {/* Confirmation Modal */}
       {studentToDelete && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md animate-in fade-in duration-200">
           <div className="max-w-sm w-full bg-[var(--surface)]/95 backdrop-blur-2xl border border-rose-500/30 rounded-2xl shadow-2xl p-6 relative overflow-hidden">
