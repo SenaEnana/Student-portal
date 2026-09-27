@@ -13,8 +13,6 @@ function StudentsDashboardContent() {
   const [items, setItems] = useState<Item[]>([]);
   const [loading, setLoading] = useState(true);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-
-  // Delete Modal State
   const [studentToDelete, setStudentToDelete] = useState<Item | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
 
