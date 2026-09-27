@@ -90,7 +90,6 @@ function StudentsDashboardContent() {
           </div>
         )}
 
-        {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
           <div>
             <h1 className="text-3xl font-extrabold tracking-tight">
@@ -116,8 +115,6 @@ function StudentsDashboardContent() {
             </Link>
           </div>
         </div>
-
-        {/* Table */}
         <div className="bg-[var(--surface)]/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
           <table className="w-full text-left border-collapse">
             <thead className="bg-white/5 border-b border-white/10 text-xs uppercase tracking-wider text-[var(--teal)] font-bold">
