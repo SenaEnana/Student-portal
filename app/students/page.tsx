@@ -67,7 +67,7 @@ function StudentsDashboardContent() {
       console.error("ERROR DELETING:", error);
     } finally {
       setIsDeleting(false);
-      setStudentToDelete(null); // Close modal
+      setStudentToDelete(null);
     }
   };
 
@@ -75,7 +75,6 @@ function StudentsDashboardContent() {
     <div className="min-h-screen animated-bg p-6 md:p-10 relative text-white">
       <div className="max-w-5xl mx-auto">
 
-        {/* Toast Notification */}
         {toastMessage && (
           <div className="fixed top-5 right-5 z-50 bg-[var(--surface)]/90 backdrop-blur-md border border-[var(--lime)]/40 text-[var(--lime)] font-medium px-5 py-3 rounded-xl shadow-2xl flex items-center justify-between gap-4 transition-all animate-in fade-in slide-in-from-top-4 duration-300">
             <div className="flex items-center gap-2">
