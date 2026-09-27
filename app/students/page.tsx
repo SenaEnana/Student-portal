@@ -175,7 +175,6 @@ function StudentsDashboardContent() {
       {studentToDelete && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md animate-in fade-in duration-200">
           <div className="max-w-sm w-full bg-[var(--surface)]/95 backdrop-blur-2xl border border-rose-500/30 rounded-2xl shadow-2xl p-6 relative overflow-hidden">
-            {/* Red Accent Blur Circle */}
             <div className="absolute -top-12 -right-12 w-28 h-28 bg-rose-500/20 rounded-full blur-2xl pointer-events-none" />
 
             <div className="flex items-center gap-3 mb-4">
