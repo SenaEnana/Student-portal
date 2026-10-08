@@ -9,15 +9,13 @@
   --background: #080d14;
   --foreground: #ffffff;
 
-  /* Primary Accent: Vibrant Cyan */
   --lime: #06b6d4;
   --lime-hover: #22d3ee;
 
-  /* Secondary Accent: Bright Cyan / Teal */
   --teal: #0891b2;
   --teal-hover: #06b6d4;
 
-  /* Highlight Accent: Light Sky Cyan */
+
   --violet: #38bdf8;
   --violet-hover: #7dd3fc;
 
