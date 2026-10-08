@@ -6,17 +6,20 @@
 }
 
 :root {
-  --background: #090d16;
-  --foreground: #f8fafc;
+  --background: #080d14;
+  --foreground: #ffffff;
 
-  --lime: #d3e4b9;
-  --lime-hover: #bef264;
+  /* Primary Accent: Vibrant Cyan */
+  --lime: #06b6d4;
+  --lime-hover: #22d3ee;
 
-  --teal: #14b8a6;
-  --teal-hover: #2dd4bf;
+  /* Secondary Accent: Bright Cyan / Teal */
+  --teal: #0891b2;
+  --teal-hover: #06b6d4;
 
-  --violet: #8b5cf6;
-  --violet-hover: #a78bfa;
+  /* Highlight Accent: Light Sky Cyan */
+  --violet: #38bdf8;
+  --violet-hover: #7dd3fc;
 
   --surface: #0f172a;
   --muted: #94a3b8;
@@ -43,12 +46,12 @@ body {
   .animated-bg {
     background: linear-gradient(
       -45deg,
-      #090d16,
-      #1e1b4b,
-      #042f2e, 
-      #1a2e05,
-      #1e1b4b,
-      #090d16
+      #080d14,
+      #083344,
+      #164e63,
+      #0e7490,
+      #083344,
+      #080d14
     );
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
