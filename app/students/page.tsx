@@ -58,7 +58,6 @@ function StudentsDashboardContent() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentItems = items.slice(startIndex, startIndex + itemsPerPage);
 
-  // Auto-adjust page if current page becomes out-of-bounds (e.g. after deletion)
   useEffect(() => {
     if (currentPage > totalPages && totalPages > 0) {
       setCurrentPage(totalPages);
