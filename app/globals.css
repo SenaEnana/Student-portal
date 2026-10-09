@@ -40,7 +40,6 @@ body {
 }
 
 @layer utilities {
-  /* Clean, static background utility without animations */
   .animated-bg {
     background: var(--background);
   }
