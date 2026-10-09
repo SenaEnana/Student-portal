@@ -16,7 +16,6 @@ function StudentsDashboardContent() {
   const [studentToDelete, setStudentToDelete] = useState<Item | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  // Pagination State
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
