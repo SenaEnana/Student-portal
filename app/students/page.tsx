@@ -54,7 +54,6 @@ function StudentsDashboardContent() {
     fetchItems();
   }, []);
 
-  // Pagination Calculations
   const totalPages = Math.ceil(items.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentItems = items.slice(startIndex, startIndex + itemsPerPage);
