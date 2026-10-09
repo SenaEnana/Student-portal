@@ -6,7 +6,7 @@
 }
 
 :root {
-  --background: #080d14;
+  --background: #0b1320;
   --foreground: #ffffff;
 
   --lime: #06b6d4;
@@ -15,13 +15,12 @@
   --teal: #0891b2;
   --teal-hover: #06b6d4;
 
-
   --violet: #38bdf8;
   --violet-hover: #7dd3fc;
 
-  --surface: #0f172a;
+  --surface: #111c2e;
   --muted: #94a3b8;
-  --border: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.08);
 }
 
 *,
@@ -42,28 +41,6 @@ body {
 
 @layer utilities {
   .animated-bg {
-    background: linear-gradient(
-      -45deg,
-      #080d14,
-      #083344,
-      #164e63,
-      #0e7490,
-      #083344,
-      #080d14
-    );
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
-  }
-
-  @keyframes gradientShift {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+    background: var(--background);
   }
 }
