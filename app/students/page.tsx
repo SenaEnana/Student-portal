@@ -206,11 +206,10 @@ function StudentsDashboardContent() {
                   <button
                     key={pageNum}
                     onClick={() => setCurrentPage(pageNum)}
-                    className={`w-8 h-8 rounded-lg text-xs font-bold transition-colors ${
-                      currentPage === pageNum
+                    className={`w-8 h-8 rounded-lg text-xs font-bold transition-colors ${currentPage === pageNum
                         ? "bg-[var(--lime)] text-slate-950"
                         : "bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10"
-                    }`}
+                      }`}
                   >
                     {pageNum}
                   </button>
