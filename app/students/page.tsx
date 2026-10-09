@@ -16,6 +16,10 @@ function StudentsDashboardContent() {
   const [studentToDelete, setStudentToDelete] = useState<Item | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
 
+  // Pagination State
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
+
   const router = useRouter();
   const searchParams = useSearchParams();
   const inlineMessage = searchParams.get("message");
@@ -50,6 +54,18 @@ function StudentsDashboardContent() {
   useEffect(() => {
     fetchItems();
   }, []);
+
+  // Pagination Calculations
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentItems = items.slice(startIndex, startIndex + itemsPerPage);
+
+  // Auto-adjust page if current page becomes out-of-bounds (e.g. after deletion)
+  useEffect(() => {
+    if (currentPage > totalPages && totalPages > 0) {
+      setCurrentPage(totalPages);
+    }
+  }, [items, totalPages, currentPage]);
 
   const confirmDelete = async () => {
     if (!studentToDelete) return;
@@ -115,6 +131,7 @@ function StudentsDashboardContent() {
             </Link>
           </div>
         </div>
+
         <div className="bg-[var(--surface)]/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
           <table className="w-full text-left border-collapse">
             <thead className="bg-white/5 border-b border-white/10 text-xs uppercase tracking-wider text-[var(--teal)] font-bold">
@@ -134,14 +151,14 @@ function StudentsDashboardContent() {
                     </div>
                   </td>
                 </tr>
-              ) : items.length === 0 ? (
+              ) : currentItems.length === 0 ? (
                 <tr>
                   <td colSpan={3} className="text-center p-12 text-[var(--muted)]">
                     No students found. Click <span className="text-[var(--lime)] font-semibold">&quot;+ Add Student&quot;</span> to create one.
                   </td>
                 </tr>
               ) : (
-                items.map((item) => (
+                currentItems.map((item) => (
                   <tr key={item.id} className="hover:bg-white/5 transition-colors group">
                     <td className="p-4 pl-6 font-mono text-xs text-[var(--violet)] font-semibold">
                       #{item.id}
@@ -168,6 +185,51 @@ function StudentsDashboardContent() {
               )}
             </tbody>
           </table>
+
+          {/* Pagination Controls */}
+          {!loading && items.length > 0 && (
+            <div className="p-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white/[0.02]">
+              <span className="text-xs text-[var(--muted)] font-medium">
+                Showing <span className="text-slate-100 font-bold">{startIndex + 1}</span> to{" "}
+                <span className="text-slate-100 font-bold">
+                  {Math.min(startIndex + itemsPerPage, items.length)}
+                </span>{" "}
+                of <span className="text-slate-100 font-bold">{items.length}</span> students
+              </span>
+
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                  disabled={currentPage === 1}
+                  className="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 bg-white/5 hover:bg-white/10 border border-white/10 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  Previous
+                </button>
+
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                  <button
+                    key={pageNum}
+                    onClick={() => setCurrentPage(pageNum)}
+                    className={`w-8 h-8 rounded-lg text-xs font-bold transition-colors ${
+                      currentPage === pageNum
+                        ? "bg-[var(--lime)] text-slate-950"
+                        : "bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10"
+                    }`}
+                  >
+                    {pageNum}
+                  </button>
+                ))}
+
+                <button
+                  onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                  disabled={currentPage === totalPages || totalPages === 0}
+                  className="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 bg-white/5 hover:bg-white/10 border border-white/10 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          )}
         </div>
 
       </div>
