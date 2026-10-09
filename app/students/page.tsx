@@ -186,7 +186,6 @@ function StudentsDashboardContent() {
             </tbody>
           </table>
 
-          {/* Pagination Controls */}
           {!loading && items.length > 0 && (
             <div className="p-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white/[0.02]">
               <span className="text-xs text-[var(--muted)] font-medium">
